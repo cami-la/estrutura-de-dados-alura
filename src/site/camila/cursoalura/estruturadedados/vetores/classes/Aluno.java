@@ -1,4 +1,4 @@
-package site.camila.cursoalura.estruturadedados.classes;
+package site.camila.cursoalura.estruturadedados.vetores.classes;
 
 public class Aluno {
 	//atributos

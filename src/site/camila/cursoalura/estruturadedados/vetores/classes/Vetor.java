@@ -1,4 +1,4 @@
-package site.camila.cursoalura.estruturadedados.classes;
+package site.camila.cursoalura.estruturadedados.vetores.classes;
 
 import java.util.Arrays;
 

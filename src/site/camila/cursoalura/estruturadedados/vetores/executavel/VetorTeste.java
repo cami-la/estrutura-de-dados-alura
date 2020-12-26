@@ -1,7 +1,7 @@
-package site.camila.cursoalura.estruturadedados.executavel;
+package site.camila.cursoalura.estruturadedados.vetores.executavel;
 
-import site.camila.cursoalura.estruturadedados.classes.Aluno;
-import site.camila.cursoalura.estruturadedados.classes.Vetor;
+import site.camila.cursoalura.estruturadedados.vetores.classes.Aluno;
+import site.camila.cursoalura.estruturadedados.vetores.classes.Vetor;
 
 public class VetorTeste {
 
