@@ -2,12 +2,18 @@ package site.camila.cursoalura.estruturadedados.listasligadas.classes;
 
 public class Celula {
 	private Object elemento;
+	
+	private Celula anterior;
 	private Celula proximo;
 	
-	public Celula(Object elemento, Celula proximo) {
-		super();
+	public Celula(Object elemento) {
+		this(null, elemento);
+	}
+	
+	public Celula(Celula proxima, Object elemento) {
+		this.proximo = proxima;
 		this.elemento = elemento;
-		this.proximo = proximo;
+	
 	}
 
 	public Celula getProximo() {
@@ -22,6 +28,14 @@ public class Celula {
 		return elemento;
 	}
 	
+	public Celula getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Celula anterior) {
+		this.anterior = anterior;
+	}
+
 	@Override
 	public String toString() {
 		return String.valueOf(this.getElemento());

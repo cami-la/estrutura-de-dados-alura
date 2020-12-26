@@ -7,12 +7,15 @@ public class ListaLigada {
 	private int totalDeElementos = 0;
 
 	public void adicionaNoComeco(Object elemento) {
-		Celula nova = new Celula(elemento, this.primeira);
-		this.primeira = nova;
-
-		if (this.totalDeElementos == 0)
-			this.ultima = this.primeira;
-
+		if(this.totalDeElementos == 0) {
+			Celula nova = new Celula(elemento);
+			this.primeira = nova;
+			this.ultima = nova;
+		} else {
+			Celula nova = new Celula(this.primeira, elemento);
+			this.primeira.setAnterior(nova);
+		}
+		
 		this.totalDeElementos++;
 	}
 
@@ -41,13 +44,12 @@ public class ListaLigada {
 		if (this.totalDeElementos == 0)
 			this.adicionaNoComeco(elemento);
 		else {
-			Celula nova = new Celula(elemento, null);
+			Celula nova = new Celula(elemento);
 			this.ultima.setProximo(nova);
-
+			nova.setAnterior(this.ultima);
 			this.ultima = nova;
-
-			this.totalDeElementos++;
 		}
+		this.totalDeElementos++;
 	}
 
 	private boolean posicaoOcupada(int posicao) {
@@ -73,7 +75,10 @@ public class ListaLigada {
 			this.adiciona(elemento);
 		else {
 			Celula anterior = this.pegaCelula(posicao - 1);
-			Celula nova = new Celula(elemento, anterior.getProximo());
+			Celula proxima = anterior.getProximo();
+			
+			Celula nova = new Celula(anterior.getProximo(), elemento);
+			nova.setAnterior(anterior);
 			anterior.setProximo(nova);
 		}
 		this.totalDeElementos++;
