@@ -38,7 +38,7 @@ public class Celula {
 
 	@Override
 	public String toString() {
-		return String.valueOf(this.getElemento());
+		return this.getElemento().toString();
 	}
 	
 	

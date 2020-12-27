@@ -7,7 +7,35 @@ public class TestaListaLigada {
 	public static void main(String[] args) {
 		ListaLigada lista = new ListaLigada();
 		
+		lista.adicionaNoComeco("Mauricio");
 		System.out.println(lista);
+		
+		lista.adicionaNoComeco("Guilherme");
+		System.out.println(lista);
+		
+		lista.adiciona("Paulo");
+		System.out.println(lista);
+		
+		lista.adiciona(2, "Cecilia");
+		System.out.println(lista);
+
+		lista.removeDoComeco();
+		System.out.println(lista);
+		
+		lista.removeDoFim();
+		System.out.println(lista);
+		
+		lista.adiciona("José");
+		lista.adiciona("João");
+		System.out.println(lista);
+		
+		lista.remove(1);
+		
+		System.out.println(lista);
+
+		
+		
+		/*System.out.println(lista);
 		lista.adicionaNoComeco("Mauricio");
 		System.out.println(lista);
 		lista.adicionaNoComeco("Paulo");
@@ -28,7 +56,7 @@ public class TestaListaLigada {
 		lista.removeDoComeco();
 		
 		System.out.println(lista);
-		System.out.println(lista.tamanho());
+		System.out.println(lista.tamanho());*/
 
 	}
 
