@@ -1,0 +1,26 @@
+package site.camila.cursoalura.estruturadedados.fila.classes;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Fila {
+	
+	private List<String> alunos = new LinkedList<String>();
+	
+	public void adiciona(String aluno) {
+		alunos.add(aluno);
+	}
+	
+	public String remove() {
+		return alunos.remove(0); //remove sempre o primeiro da lista, ou seja o primeiro a ser inserido.
+	}
+	
+	public boolean vazia() {
+		return alunos.isEmpty();
+	}
+	@Override
+	public String toString() {
+		return alunos.toString();
+	}
+	
+}

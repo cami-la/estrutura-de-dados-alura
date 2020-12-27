@@ -12,7 +12,7 @@ public class Pilha {
 	}
 	
 	public String pop() {
-		return nomes.remove(nomes.size()-1);
+		return nomes.remove(nomes.size()-1); //remove o último a ser inserido
 	}
 	
 	public boolean vazia() {
